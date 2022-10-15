@@ -10,8 +10,59 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+    </head> 
+      <body>
+        <div class="user">
+          <header class="user__header">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+        <h1 id="first">Welcome to Nue</h1>
+        </header>
+        <sec id="auth-home">
+          <!-- <h3>Don't have an Account? Sign Up</h3> -->
+          <form id="sign-up-form" class="form">
+            <div class="form_group"><input name="credentials[email]" type="email" placeholder="Email" class="form_input" id="butts"></div>
+          <div class="form_group"> <input name="credentials[password]" type="password" placeholder="Password" class="form_input" id="butts1"></div>
+            <div class="form_group"><input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password" class="form_input" id="butts2"></div>
+            <button class="auth-btn" type="submit">Sign Up</button>
+          </form>
+          <sec id="auth-display"></sec>
+          <!-- <h3>OR</h3> -->
+          <!-- <h3>Have an Account? Sign In</h3> -->
+          <form id="sign-in-form" class="form">
+            <div class="form_group"><input name="credentials[email]" type="email" placeholder="Email" class="form_input" id="butts3"></div>
+            <div class="form_group"><input name="credentials[password]" type="password" placeholder="Password" class="form_input" id="butts4"></div>
+            <button class="auth-btn" type="submit">Sign In</button>
+          </form>
+        </sec>
+      </div>
+        <sec id="password">
+          <button type="button" class="btn btn-primary pass auth-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Change Password
+          </button>
+        
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Change Your Password</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="password-form">
+                    <input name="passwords[old]" type="password" placeholder="Old Password">
+                    <input name="passwords[new]" type="password" placeholder="New Password">
+                    <div id="pass-success"></div>
+        
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary pass">Change Password</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sec>
+        <button id="sign-out" class="auth-btn">Sign Out</button>
+
 </html>
